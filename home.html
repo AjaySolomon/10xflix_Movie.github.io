@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/bootstrap-3.4.1-dist/css/bootstrap.min.css">
+    <style>
+        .dropdown-menu:hover
+        {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        }
+        .dropbtn {
+  background-color: transparent;
+  color: white;
+  padding: 10px;
+  font-size:15px;
+  border: 0px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-left: 20px;
+  margin-top: 6px;
+  height: 35px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: aliceblue;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: medium;
+  background-color: rgb(0, 0, 0);
+}
+
+.dropdown-content a:hover 
+{
+  background-color: red;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+#tool:hover{
+    text-decoration: underline;
+    text-decoration-color: red;
+    text-decoration-thickness: 3px;
+}
+h1:hover{
+  background-color: #02000753;
+  display: inline-block;
+  font-weight: 500;
+
+}
+p {
+  color: aliceblue;
+  font-size: 20px;
+}
+ul{
+  color: aliceblue;
+  font-size: large;
+}
+#movie:hover{
+    text-decoration: underline;
+    text-decoration-color: red;
+    text-decoration-thickness: 3px;
+}
+#fab:hover{
+  color:#1b4cb5;
+}
+#insta:hover{
+  color: 	#C13584;
+}
+#you:hover{
+  color: #c4302b;
+}
+#home:hover{
+  text-decoration: underline;
+    text-decoration-color: red;
+    text-decoration-thickness: 3px;
+}
+    </style>
+</head>
+<body style="background: url(https://repository-images.githubusercontent.com/275336521/20d38e00-6634-11eb-9d1f-6a5232d0f84f);background-repeat: no-repeat;background-attachment: fixed;background-size: cover;width: 99%;">
+    <div class="navbar navbar-inverse">
+        <ul class="nav navbar-nav">
+            <li class="dropdown"><button id="home" style="background-color:transparent;border: 0px; margin-left: 100px;margin-top: 10px;" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">HOME </button>
+            </li>
+            <li><div style="margin-top: 10px;margin-left: 10px;" class="dropdown">
+        <button id="movie" style="background-color:transparent;border: 0px;" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+            MOVIE PICKER 
+        </button>
+    </div>
+            </li>
+            <div class="dropdown">
+        <button class="dropbtn">TOP GENRES<span class="caret"></span></button>
+        <div class="dropdown-content">
+        <a href="#">ACTION</a>
+        <a href="#">DRAMA</a>
+        <a href="#">FANTASY</a>
+        <a href="#">ROMANCE</a>
+        <a href="#">THRILLER</a>
+        </div>
+        </div>
+        </ul>
+        <div ><a class="navbar-brand" href="" style="height: 60px;width: 250px; margin-left: 150px;text-align: center;color:rgba(245, 14, 14, 0.857); background-color:rgba(206, 189, 189, 0.027) ;font-weight: bolder; font-size:50px;font-family:Georgia, 'Times New Roman', Times, serif;border: 0px solid black;"> 1҉0҉xflix</a>
+        </div>
+        <ul  class="nav navbar-nav navbar-right">
+            <li><a href="#blog"><button id="tool" style="margin-top: 1px;margin-right:20px;font-size: 15px;background-color: transparent;color: aliceblue;border: 0px;font-weight: 700;">BLOG <i style="margin-left: 30px;" class="fa-solid fa-magnifying-glass"></i></button></a></li>
+            <li><a href="https://www.facebook.com/login/"><span id="fab" style="font-size: 25px;" class="fab fa-facebook"  aria-hidden="true"></span></a></li>
+            <li><a href="https://www.instagram.com/" rel="noopener noreferrer"><span id="insta" style="font-size: 25px;" class="fab fa-instagram" aria-hidden="true"></span></a></li>
+            <li><a href="https://accounts.google.com/v3/signin/identifier?dsh=S-1375454706%3A1688703020410902&continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26app%3Ddesktop%26hl%3Den%26next%3Dhttps%253A%252F%252Fwww.youtube.com%252Faccount%26feature%3Dredirect_login&hl=en&ifkv=AeDOFXgo5nOFazYV9x1_m1xuTq4-MiA5FEO0_fMjrkRI1M24LlgQigKz5q8_PhNZ72p9z1BfE93fpA&passive=true&service=youtube&uilel=3&flowName=GlifWebSignIn&flowEntry=ServiceLogin"><span id="you" style="font-size: 25px;" class="fab fa-youtube" aria-hidden="true"></span></a></li>
+            <li><a class="dropdown" id="home" style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;margin-top: 4px;" href="./login.html">LOGIN</a></li>
+            <li><a class="dropdown" id="home" style="margin-right: 70px;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;margin-top: 4px;" href="./signup.html">SIGNUP</a></li>
+            <div></div>
+        </ul>
+    </div>
+    <h1 style="text-transform: uppercase;color: rgb(255, 255, 255);
+    font-size: 50px;margin: 100px;margin-left: 300px;display: inline-block;
+    letter-spacing: 2px;
+    text-shadow: 0 0 5px #fff;" class="elementor-heading-title elementor-size-default">Movie <br> Recommendation <br> Engine</h1>
+    <div  style="margin-left: 305px;margin-bottom: 80px;font-size: larger;color: white;">
+      <a class="myDIV" href="./signup.html"><button  style="background-color: red;height: 40px;width: 120px;font-family:'Courier New', Courier, monospace;font-weight: 700;color: #f1f1f1;">SIGNUP NOW</button></a>
+      
+    </div>
+
+<div  style="border: 1px solid black; background-color: rgba(33, 33, 34, 0.646);margin: 0px;">
+
+<div id="blog" style="margin: 100px;width: 1300px;"> 
+    <p><span style="font-family: Josefin Sans;font-size: 25px;font-weight: 800;text-align: left;background-color: rgba(156, 159, 162, 0.259);">The Smart Way To Pick A Movie.</span>  <br><br>
+    <span style="background-color: rgba(240, 248, 255, 0.095);">Watching movies is fun, but figuring out what movie to watch next is a nerve-racking experience. Endlessly scrolling through <span style="text-decoration: underline;">Netflix</span> , watching trailers on YouTube, looking up IMDb ratings, wasting half an hour and still cannot decide what to watch – does this seem familiar to you?</span> 
+<br><br>
+    <span style="background-color: rgba(240, 248, 255, 0.129);">Then you have landed on the right page! PickAMovieForMe’s movie recommendation engine is the answer to the question “What movie should I watch?”! Your film choices are about to be simplified greatly.</span> 
+<br><br>
+    <span style="background-color: rgba(240, 248, 255, 0.109);">Our quiz-based movie picker finds the perfect movie for your mood, occasion and individual preferences in just a few minutes! Whether you’re watching a movie by yourself, joining a movie night with friends or going on a movie date with your crush – our quiz will guide you to an awesome choice!</span> 
+<br><br><br>
+  <span style="font-family: Josefin Sans;font-size: 25px;font-weight: 800;text-align: left;background-color: rgba(111, 111, 111, 0.279);"> What Makes This Movie Recommendation Engine Unique?</span> <br><br>
+<ul style="background-color: rgba(240, 248, 255, 0.095);font-size: 20px;">
+  <li>all listed movies are hand-picked and manually tagged by film connoisseurs ensuring high quality recommendations <br></li>
+  <li>even your mood and the occasion are considered in the movie suggestion <br></li>
+  <li>NEW: you can now watch movie trailers directly on our website <br></li>
+  <li>you get only one recommendation at a time, so there isn’t a hard decision again (there is a button to get the next recommendation) <br></li>
+  <li>new movies are added consistently <br></li>
+  <li>special recommendations for movie dates: these movies are perfect for dates & will help you to make a good impression on your crush <br></li>
+  <li>special categories: movies based on true stories or books, Spy Movies, Cop Movies, Heist Movies, Girl Power Movies, Racing Movies, Space Movies, Wedding Movies, IMDb Top 250 movies, movies set in New York, movies set in Las Vegas, movies that may change the way you look at life … <br></li>
+</ul>
+    <br> <br>
+  <p style="background-color: rgba(240, 248, 255, 0.088);margin-left: 200px;display: inline-block;"> Give it a try! If you like it, please share it! If not, we highly appreciate any kind of feedback.</p>
+  </div>
+</div>
+<fieldset style="border: 1px solid black;background-color: rgba(0, 0, 0, 0.918);height: 100px;">
+  <div>
+    
+  </div>
+  
+  <div style="margin-left: 0px;margin-top: 10px;">
+    <p style="display: inline-block;font-size: small;margin-left: 100px;margin-top: 30px;">© COPYRIGHT 2023 - 10XFLIX.COM</p>
+    <p style="display: inline-block;font-size: small;margin-left: 900px;">CONTACT | </p>
+    <p style="display: inline-block;font-size: small;margin-left: px;">PRIVACY POLICY</p>
+  </div>
+  
+</fieldset>
+    <script src="/bootstrap-3.4.1-dist/js/jquery.min.js"></script>
+    <script src="/bootstrap-3.4.1-dist/js/bootstrap.min.js"></script>
+</body>
+</html>

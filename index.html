@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/bootstrap-3.4.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script>
+        function social() {
+        var sam = document.getElementById("req").value;
+        if (sam == 'LATEST') {
+        window.location.href = "#LATEST";
+        }
+        else if(sam == '2023'){
+        window.location.href = "#2023";
+        }
+        else if(sam == 'Horror'){
+        window.location.href = "#Horror";
+        }
+        else if(sam == 'Animation'){
+        window.location.href = "#Animation";
+        }
+        else if(sam == 'Thriller'){
+        window.location.href = "#Thriller";
+        }
+    }
+    </script>
+</head>
+<style>
+    
+    #searchsubmit{
+        font-size: large;
+        width:10% ;
+        height: 30px;
+    }
+    #film{
+        font-size: x-large;
+    }
+    #category:hover{
+        color: dimgray;
+    }
+    .img__wrap:hover .img__description {
+    margin: 0px;
+    padding: 0px;
+    visibility: visible;
+    opacity: 1;
+    }   
+    .img__wrap {
+    position: relative;
+    height: 400px;
+    width: 350px;
+    }
+    .img__description {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(248, 247, 247, 0.72);
+    color: rgb(7, 1, 1);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .2s, visibility .2s;
+    }
+    /* #ant{
+        border: 1px solid black;
+    }
+    #ant:hover{
+        color: aliceblue;
+    }
+     */
+</style>
+<body style="width: 99%;background: url(./nelson-gradient-hd-wallpaper.png);background-size: cover;background-attachment: fixed;background-repeat: no-repeat;">
+    <div  class="navbar navbar-inverse">
+        <div ><a class="navbar-brand" href="" style="text-align: center;color:rgba(245, 14, 14, 0.857); background-color:rgba(7, 15, 30, 0.945) ;font-size:50px;font-family:Georgia, 'Times New Roman', Times, serif;border: 0px;"> 10xflix</a>
+        </div>
+        <ul style="margin-left: 40px;" class="nav navbar-nav">
+            <li><a href="./home.html">HOME</a></li>
+            <li style="margin-left: 20px;"><a href="./home.html">ABOUT BLOG</a></li>
+            <li style="margin-left: 20px;"><a href="./contact.html">CONTACT</a></li>
+
+            
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href=""><i class="fa-solid fa-user-tie"></i> PROFILE </a></li>
+            <li><a href="./login.html">LOGOUT</a></li>
+        </ul>
+    </div>
+
+    <br>
+    <fieldset style="background-color:brown;color: aliceblue;margin-left: 60px;margin-right: 23px;font-size: larger;border: 0px;">
+        <p style="text-align: center;"><strong >MOVIE COLLECTIONS</strong> </p>
+    </fieldset><br><br>
+    <fieldset>
+    <fieldset style="border: 0px;">
+        <div>
+                <form action="/action_page.php" method="get">
+                <label for="browser"></label>
+                <button style="width:50px;height: 30px;margin-left: 55px;"><i class="fa-solid fa-house"></i></button>
+                
+                <select style="width: 50%;height: 30px;margin-left: 10px;"placeholder="Search.."  id="req">
+                <option value="2023">2023 movies</option>
+                <option value="LATEST">Latest</option>
+                <option value="Horror">Horror Movies</option>
+                <option value="Thriller">Thriller movies</option>
+                <option value="Comedy">Comedy movies</option>
+                <option value="Animation">Animation movies</option>
+                </select>
+                <button onclick="social()" style="width:70px;height: 30px;margin-left: 20px;" ><i class="fa-solid fa-magnifying-glass"></i></button>
+                <button style="width:40px;height: 30px;margin-left: 20px;"><i class="fa-solid fa-arrow-left"></i></button>
+                <button style="width:40px;height: 30px"><i class="fa-solid fa-arrow-right"></i></button>
+                
+                </form>
+                </datalist>
+            
+                
+        </div>
+        
+        
+    </fieldset>
+    <br>
+        <div id="film">
+            <p style="margin: 40px;">Films</p> 
+            <div class="category">
+            <button style="margin-left: 30px;width:100px;height: 35px;border: 0px;background-color: rgba(128, 128, 128, 0.163);border-radius: 20px;font-size: small;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" >2023</button>
+            <button style="margin-left: 30px;width:100px;height: 35px;border: 0px;background-color: rgba(128, 128, 128, 0.163);border-radius: 20px;font-size: small;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">English</button>
+            <button style="margin-left: 30px;width:100px;height: 35px;border: 0px;background-color: rgba(128, 128, 128, 0.163);border-radius: 20px;font-size: small;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Horror</button>
+            <button style="margin-left: 30px;width:100px;height: 35px;border: 0px;background-color: rgba(128, 128, 128, 0.163);border-radius: 20px;font-size: small;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Thriller</button>
+            <button style="margin-left: 30px;width:100px;height: 35px;border: 0px;background-color: rgba(128, 128, 128, 0.163);border-radius: 20px;font-size: small;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Comedy</button>
+            <button style="margin-left: 30px;width:100px;height: 35px;border: 0px;background-color: rgba(128, 128, 128, 0.163);border-radius: 20px;font-size: small;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Anime</button>
+            <button style="margin-left: 30px;width:100px;height: 35px;border: 0px;background-color: rgba(128, 128, 128, 0.163);border-radius: 20px;font-size: small;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Sci-fi</button>
+            <button style="margin-left: 30px;width:100px;height: 35px;border: 0px;background-color: rgba(128, 128, 128, 0.163);border-radius: 20px;font-size: small;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Fantasy</button>
+            <button style="margin-left: 30px;width:100px;height: 35px;border: 0px;background-color: rgba(128, 128, 128, 0.163);border-radius: 20px;font-size: small;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Drama</button>
+            <button style="margin-left: 30px;width:100px;height: 35px;border: 0px;background-color: rgba(128, 128, 128, 0.163);border-radius: 20px;font-size: small;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Action</button>
+            </div>
+        </div>
+    </fieldset><br>
+    <fieldset id="LATEST" style="width: 98;height:1200px;">
+        <div>
+            <table>
+                <thead><p style="text-align: center;font-size: x-large;"><strong><em><mark style="color:red ">.....TRENDING....</mark></em> LATEST MOVIES</strong></p><strong> </strong></thead>
+                <tr>
+                    <th><div class="img__wrap">
+                    <img class="img__img" style="margin-left: 10px;" src="https://imgshare.info/images/2023/05/18/60cff03ed13b5d5b3323f3ca025da0e9.jpg" >
+                    <p style="margin-left: 20px;" class="img__description">Ant-Man and the Wasp find themselves exploring the Quantum Realm, interacting with strange new creatures and embarking on an adventure that pushes them beyond the limits of what they thought was possible.</p>
+                    <label style="margin-left: 30px;">Ant-Man and the Wasp: Quantumania <br>CBFC: U/A 2023 ‧ Action/Adventure ‧ 2h 5m
+</label>        </div>
+                    </th>
+
+                    <th><div class="img__wrap">
+                        <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQkt0sbPyrPtNbq10WtcGNEaiumgCpY-niW9AuxIcADocZzoGzj" jsaction="VQAsE" class="r48jcc pT0Scc iPVvYb" style="max-width: 728px; height: 500px; margin: 0px;margin-top: px; width: 342px;margin-left: 30px;" alt="" jsname="kn3ccd">
+                        <p class="img__description"style="margin-left: 20px;">Bestowed with the powers of the gods, Billy Batson and his fellow foster kids are still learning how to juggle teenage life with their adult superhero alter egos. When a vengeful trio of ancient gods arrives on Earth in search of the magic stolen from them long ago, Shazam and his allies get thrust into a battle for their superpowers, their lives, and the fate of the world.</p>
+                    <label style="margin-left: 40px;" for="">Shazam! Fury of the Gods <br>
+CBFC: U/A 2023 ‧ Action/Fantasy ‧ 2h 10m
+</label>            </div>
+                    </th>
+                    <th><div class="img__wrap">
+                        <img style="display: block;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;margin-left: 30px;" src="https://movies.universalpictures.com/media/fstx-montage1sheet2-rgb-1-64108e93e63dd-1.jpg" width="340px" height="500px">
+                        <p class="img__description"style="margin-left: 50px;">Over many missions and against impossible odds, Dom Toretto and his family have outsmarted and outdriven every foe in their path. Now, they must confront the most lethal opponent they've ever faced. Fueled by revenge, a terrifying threat emerges from the shadows of the past to shatter Dom's world and destroy everything -- and everyone -- he loves.</p>                    
+                    <label style="margin-left: 40px;" for="">Fast X <br>
+CBFC: U/A 2023 ‧ Action/Adventure ‧ 2h 21m</label></div>
+                    </th>
+                    <th><div class="img__wrap">
+                        <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTslskXBSMy0kAhcDsCHmf2KmNMgva17TaGU2W59Sq-CLgibiIw" jsaction="VQAsE" class="r48jcc pT0Scc iPVvYb" style="max-width: 1038px; height:500px; margin-left: 50px; width: 350px;display: block;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;margin-top: px;" alt="" jsname="kn3ccd">
+                        <p class="img__description" style="margin-left: 50px;">Still reeling from the loss of Gamora, Peter Quill must rally his team to defend the universe and protect one of their own. If the mission is not completely successful, it could possibly lead to the end of the Guardians as we know them.</p>         
+                    <label style="margin-left: 60px;" for="">Guardians of the Galaxy Vol. 3 <br>
+CBFC: U/A 2023 ‧ Sci-fi/Action ‧ 2h 29m
+</label></div>
+                    </th>
+                </tr>
+            </table>
+            <table>
+                <thead>
+                    
+                </thead>
+                <tr>
+                    <th><div class="img__wrap">
+                        <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRThdMTT0zp6gjCY7OQjnyBs4WzkdmDDWuN97Fv7vhO7UtDbPlZ" jsaction="VQAsE" class="r48jcc pT0Scc iPVvYb" style="max-width: 864px; height: 418px; margin: 0px; width: 350px;margin-top: 150px;display: block;margin-left: 10px;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;margin-top: 200px;" alt="" jsname="kn3ccd">
+                        <p style="margin-left: 20px;" class="img__description">During the 1990s, the Maximals, Predacons and Terrorcons join the existing battle on Earth between Autobots and Decepticons.
+                        </p>
+                    <label style="margin-left: 30px;" for=""><br> Transformers: Rise of the Beasts <br>
+2023 ‧ Action/Adventure ‧ 2h 7m
+</label></div>
+                    </th>
+                    <th><div class="img__wrap">
+                        <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQqLYH_Sfv0dDGSzu6UhTmaYUo1OxBSTtUmRjZIqazHipy3K6Al" jsaction="VQAsE" class="r48jcc pT0Scc iPVvYb" style="max-width: 864px; height: 418px; margin: 0px; width: 350px;margin-top: 150px;display: block;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;margin-left: 20px;margin-top: 200px;" alt="" jsname="kn3ccd">
+                        <p style="margin-left: 20px;" class="img__description">Worlds collide when the Flash uses his superpowers to travel back in time to change the events of the past. However, when his attempt to save his family inadvertently alters the future, he becomes trapped in a reality in which General Zod has returned, threatening annihilation.</p>
+                    <label for=""><br> The Flash <br>
+2023 ‧ Action/Adventure ‧ 2h 20m
+</label></div>
+                    </th>
+                    <th><div class="img__wrap">
+                        <img src="https://m.media-amazon.com/images/M/MV5BYWZmM2UyOTEtMGJjZC00ODYyLWJmYzgtYmU0Nzk0MDA5NjM2XkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_FMjpg_UX1000_.jpg" jsaction="VQAsE" class="r48jcc pT0Scc iPVvYb" style="max-width: 728px; height: 418px; margin: 1px 0px; width: 350px;margin-top: 150px;display: block;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;margin-left: 30px;margin-top: 200px;" alt="https://m.media-amazon.com/images/M/MV5BYWZmM2UyOTEtMGJjZC00ODYyLWJmYzgtYmU0Nzk0MDA5NjM2XkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_FMjpg_UX1000_.jpg" jsname="kn3ccd">
+                        <p class="img__description"style="margin-left: 30px;" >After being presumed dead, mercenary Tyler Rake returns for another high-stakes mission.
+</p>
+                    <label for="" style="margin-left: 30px;"><br> Extraction 2 <br>
+2023 ‧ Action/Thriller
+</label></div>
+                    </th>
+                    <th><div class="img__wrap"><img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRxnukfufVJV1widtCMvZGfvsTluu1XGPsi9DnYSm2U9eWMFEwQ" jsaction="VQAsE" class="r48jcc pT0Scc iPVvYb" style="max-width: 728px; height: 418px; margin: 1px 0px; width: 350px; cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;margin-left: 40px;margin-top: 100px;" alt="" jsname="kn3ccd">
+                        <p style="margin-top: 100px;margin-left: 50px;" class="img__description" >After a catastrophic crash on an unknown planet, pilot Mills quickly discovers he's actually stranded on Earth -- 65 million years ago. Now, with only one chance at a rescue, Mills and the only other survivor, Koa, must make their way across an unknown terrain riddled with dangerous prehistoric creatures.</p>
+                    <label for="" style="margin-left: 40px;"> <br> 65 <br>
+CBFC: U/A 2023 ‧ Sci-fi/Action ‧ 1h 33m</label></div>
+                    </th>
+                </tr>
+            </table>
+        </div>
+    </fieldset><br>
+    <fieldset id="2023" style="width: 98%; height: 1700px;">
+        <div>
+            <table>
+                <thead>
+                    <p style="font-size:x-large;text-align: center;color: blue;"><strong >*******2023 MOVIES******(ALL GENRES || ALL LANGUAGES ) <em><mark>AVAILABLE HERE!!!</mark> </em> </strong> </p>
+                    
+                </thead>
+                <tr>
+                    <th><div class="img__wrap"><img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQtrH0mQFT4UO4AuSjURYUll5aF4k5hGiRU6u8VYBA60Yr6-IL0" jsaction="VQAsE" class="r48jcc pT0Scc iPVvYb" style="max-width: 728px; height: 418px; margin: 1px 0px; width: 350px;margin-top: 150px;display: block;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;margin-top: 0px;margin-left: 10px;" alt="" jsname="kn3ccd">
+                        <p class="img__description"style="margin-left: 50px;">With the price on his head ever increasing, legendary hit man John Wick takes his fight against the High Table global as he seeks out the most powerful players in the underworld, from New York to Paris to Japan to Berlin.</p>
+                    <label style="margin-left: 20px;" ><br> John Wick: Chapter 4 <br>
+CBFC: A 2023 ‧ Action/Neo-noir ‧ 2h 49m</label></div></th>
+
+                    <th><div class="img__wrap"><img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRI_Owr6ghUx2TRlF-if7hc9usc-59VppAk2HoY7nIyzPhBCpPj" jsaction="VQAsE" class="r48jcc pT0Scc iPVvYb" style="max-width: 728px; height: 418px; margin: 1px 0px; width: 350px;margin-top: 150px;display: block;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;margin-top: 0px;margin-left: 30px;" alt="" jsname="kn3ccd">
+                        <p class="img__description"style="margin-left: 50px;">After 10 years of imprisonment, Bholaa is finally going home to meet his young daughter. However, his journey is not so simple as he soon faces a pathway full of crazy obstacles, with death lurking around every corner.</p>
+                    <label for="" style="margin-left: 50px;"><br> Bholaa <br>
+CBFC: U/A 2023 ‧ Thriller/Drama ‧ 2h 24m
+</label></div></th>
+                    <th><div class="img__wrap"><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTIAyzvSvM23v2DFFEGZlIb8P_pZazDefwO7Z3tRFtjTe6oBdER" jsaction="VQAsE" class="r48jcc pT0Scc iPVvYb" style="max-width: 728px; height: 418px; margin: 1px 0px; width: 350px;margin-top: 150px;display: block;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;margin-top: 0px;margin-left: 40px;" alt="" jsname="kn3ccd">
+                        <p class="img__description"style="margin-left: 50px;">Father Gabriele Amorth, chief exorcist for the Vatican, battles Satan and innocent-possessing demons. A detailed portrait of a priest who performed more than 100,000 exorcisms in his lifetime.</p>
+                    <label for="" style="margin-left:50px;"><br> The Pope's Exorcist <br>
+CBFC: A 2023 ‧ Horror ‧ 1h 43m</label></div></th>
+                    <th><div class="img__wrap"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_SCnqF9nQlt-tCOKh-rUDJSwt6sjO-FGcfjp3T615bk0sSRGC" jsaction="VQAsE" class="r48jcc pT0Scc iPVvYb" style="max-width: 728px; height: 418px; margin: 1px 0px; width: 350px;margin-top: 150px;display: block;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;margin-top: 0px;margin-left: 50px;" alt="" jsname="kn3ccd">
+                        <p class="img__description"style="margin-left: 50px;">‘The Kerala Story' narrates the tales of three young girls from various regions of Kerala, with the primary focus on the story of Shalini, who is abducted and subsequently converted to Islam. Shalini is then radicalized. and compelled to join ISIS as a terrorist.</p>
+                        <label for="" style="margin-left: 50px;"><br> The Kerala Story <br>
+CBFC: A 2023 ‧ Drama/Crime ‧ 2h 18m
+</label></div></th>
+                </tr>
+                <tr>
+                    <th><div class="img__wrap"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXxKaL__Q2qR9RrmBtRFEOkIitISIZfNnsXZ-QFeUcd3gCwiXd" jsaction="VQAsE" class="r48jcc pT0Scc iPVvYb" style="max-width: 728px; height: 418px; margin: 1px 0px; width: 350px;margin-top: 150px;display: block;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;margin-top: 140px;margin-left: 20px;" alt="" jsname="kn3ccd">
+                        <p class="img__description"style="margin-left: 50px;">A reunion between two estranged sisters gets cut short by the rise of flesh-possessing demons, thrusting them into a primal battle for survival as they face the most nightmarish version of family imaginable.</p>
+                    <label for="" style="margin-left: 20px;"><br> Evil Dead Rise <br>
+CBFC: A 2023 ‧ Horror/Fantasy ‧ 1h 36m</label></div></th>
+                    <th>
+                        <div class="img__wrap"><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRZMm5H0iWTyIVrKthKmDjlj8mO1CFrKT54PxpOH43Zh1uxPIbn" jsaction="VQAsE" class="r48jcc pT0Scc iPVvYb" style="max-width: 728px; height: 418px; margin: 1px 0px; width: 350px;margin-top: 150px;display: block;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;margin-top: 140px;margin-left: 30px;" alt="" jsname="kn3ccd">
+                            <p class="img__description"style="margin-left: 50px;">Two younger siblings must wait to marry until their elder brother becomes attached, but he's ageing and still a bachelor.</p>
+                        <label for="" style="margin-left: 50px;"><br>Kisi Ka Bhai Kisi Ki Jaan <br>
+CBFC: U/A 2023 ‧ Action/Romance ‧ 2h 24m
+</label></div>
+                    </th>
+                    <th><div class="img__wrap"><img src="https://cdn.bollywoodmdb.com/fit-in/cover/300x450/16987_chatrapathi_cover.jpg" jsaction="VQAsE" class="r48jcc pT0Scc iPVvYb"style="max-width: 728px; height: 418px; margin: 1px 0px; width: 350px;margin-top: 150px;display: block;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;margin-top: 140px;margin-left: 40px;" alt="https://cdn.bollywoodmdb.com/fit-in/cover/300x450/16987_chatrapathi_cover.jpg" jsname="kn3ccd">
+                        <p class="img__description"style="margin-left: 50px;">Chatrapathi is a 2023 Indian Hindi-language action masala film directed by V. V. Vinayak and produced by Jayantilal Gada of Pen India Limited. It is a remake of the 2005 Telugu film of the same name.</p>
+                    <label for="" style="margin-left: 50px;"><br>Chatrapathi <br>
+CBFC: U/A 2023 ‧ Drama/Action
+                </label></div></th>
+                <th>
+                    <div class="img__wrap"><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcToThuQM4JHCDwhV99solUZp2VvpX5tw8lxI2SyL5Z-l6qyhsjq" jsaction="VQAsE" class="r48jcc pT0Scc iPVvYb" style="max-width: 728px; height: 418px; margin: 1px 0px; width: 350px;margin-top: 150px;display: block;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;margin-top: 140px;margin-left: 50px;"alt="" jsname="kn3ccd">
+                        <p class="img__description"style="margin-left: 50px;">To earn extra cash, Mickey helps couples break up. However, life gets complicated when he falls for Tinni, a career woman with an independent streak.</p>
+                    <label for="" style="margin-left: 50px;"><br>Tu Jhoothi Main Makkaar <br>
+CBFC: U/A 2023 ‧ Romance/Comedy ‧ 2h 30m
+</label></div>
+                </th>
+                </tr>
+                <tr>
+                    <th><div class="img__wrap"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRfAiaaGjqIGVuFWsQDjQVeL2xdjJ1cYRVlItT3BFeUjTCdhaM" jsaction="VQAsE" class="r48jcc pT0Scc iPVvYb" style="max-width: 728px; height: 418px; margin: 1px 0px; width: 350px;margin-top: 150px;display: block;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;margin-top: 140px;margin-left: 10px;" alt="" jsname="kn3ccd">
+                        <p class="img__description"style="margin-left: 50px;">Arulmozhi Varman continues on his quest to become Rajaraja I, the greatest ruler of south India's historic Chola empire.</p>
+                    <label for="" style="margin-left: 10px;"><br>Ponniyin Selvan: II <br>
+CBFC: U/A 2022 ‧ Action/Drama ‧ 2h 50m</label></div></th>
+                    <th><div class="img__wrap"><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcT-S81gaS-IAz0F-IlS_q0oPaVy_9NMFg4rLFQt_XjsAUWwWzEC" jsaction="VQAsE" class="r48jcc pT0Scc iPVvYb" style="max-width: 728px; height: 418px; margin: 1px 0px; width: 350px;margin-top: 150px;display: block;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;margin-top: 140px;margin-left: 30px;" alt="" jsname="kn3ccd">
+                        <p class="img__description"style="margin-left: 50px;">A tough police officer sets out on a mission to track down and eliminate a gangster with a reputation as legendary as his own.</p>
+                    <label for="" style="margin-left: 50px;"><br>Vikram Vedha <br>
+CBFC: U/A 2022 ‧ Action/Thriller ‧ 2h 40m
+</label></div>
+                    </th>
+                    <th><div class="img__wrap"><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSmGggtpJ4TX3aN3PUaVWUgNODHespRPvKYAyhGUAZSqSOmPiEm" jsaction="VQAsE" class="r48jcc pT0Scc iPVvYb" style="max-width: 728px; height: 418px; margin: 1px 0px; width: 350px;margin-top: 150px;display: block;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;margin-top: 140px;margin-left: 40px;" alt="" jsname="kn3ccd">
+                        <p class="img__description"style="margin-left: 50px;">Jake Sully and Ney'tiri have formed a family and are doing everything to stay together. However, they must leave their home and explore the regions of Pandora. When an ancient threat resurfaces, Jake must fight a difficult war against the humans.</p>
+                    <label for="" style="margin-left: 50px;"><br>Avatar: The Way of Water <br>
+CBFC: U/A 2022 ‧ Sci-fi/Action ‧ 3h 12m</label></div>
+                    </th>
+                    <th><div class="img__wrap"><img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSyWwOs-p9xzXUkgeGuWpAyuI3_tGIN33TzvSUrp2hTa-32OLFG" jsaction="VQAsE" class="r48jcc pT0Scc iPVvYb" style="max-width: 728px; height: 418px; margin: 1px 0px; width: 350px;margin-top: 150px;display: block;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;margin-top: 140px;margin-left: 50px;" alt="" jsname="kn3ccd">
+                        <p class="img__description"style="margin-left: 50px;">When his terminally ill father leaves him in charge of his business conglomerate, a prodigal son must prove his mettle and reunite his broken family.</p>
+                    <label for="" style="margin-left: 20px;"><br>Varisu <br>
+CBFC: U 2023 ‧ Drama/Action ‧ 2h 47m
+</label></div>
+                    </th> 
+                </tr>
+            </table>
+        </div>
+    </fieldset>
+    <fieldset id="Horror" style="width: 98%;">
+        <table>
+            <thead>
+                <p style="font-size:x-large;text-align: center;color: rgb(198, 198, 198);text-shadow: 2px 2px red;">********HORROR MOVIES******</em> </strong> </p>
+                
+            </thead>
+        </table>
+    </fieldset>
+    <fieldset style="width: 98%">
+        <table style="height: 1000px;">
+            <thead>
+                <p style="font-size: x-large;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;font-weight: 500;">Popular horror films</p> 
+
+            </thead>
+            <tbody>
+                <tr>
+                    <th><div class="img__wrap"><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTIAyzvSvM23v2DFFEGZlIb8P_pZazDefwO7Z3tRFtjTe6oBdER" jsaction="VQAsE" class="r48jcc pT0Scc iPVvYb" style="max-width: 728px; height: 418px; margin: 1px 0px; width: 350px;margin-top: 150px;display: block;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;margin-top: 0px;margin-left: 10px;" alt="" jsname="kn3ccd">
+                        <p class="img__description"style="margin-left: 50px;">
+                            Father Gabriele Amorth, chief exorcist for the Vatican, battles Satan and innocent-possessing demons. A detailed portrait of a priest who performed more than 100,000 exorcisms in his lifetime.
+                        </p>
+                    <label for=""style="margin-left: 50px;"><br> The Pope's Exorcist <br>
+CBFC: A 2023 ‧ Horror ‧ 1h 43m</label></div>
+                    </th>
+                    <th><div class="img__wrap"><img src="https://dx35vtwkllhj9.cloudfront.net/universalstudios/megan/images/regions/us/onesheet.jpg" jsaction="VQAsE" class="r48jcc pT0Scc iPVvYb"style="max-width: 728px; height: 418px; margin: 1px 0px; width: 350px;margin-top: 150px;display: block;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;margin-top: 0px;margin-left: 30px;"alt="" jsname="kn3ccd">
+                        <p class="img__description"style="margin-left: 50px;">
+                            M3GAN is a marvel of artificial intelligence, a lifelike doll that's programmed to be a child's greatest companion and a parent's greatest ally. Designed by Gemma, a brilliant roboticist, M3GAN can listen, watch and learn as it plays the role of friend and teacher, playmate and protector. When Gemma becomes the unexpected caretaker of her 8-year-old niece, she decides to give the girl an M3GAN prototype, a decision that leads to unimaginable consequences.
+                        </p>
+                    <label for=""style="margin-left: 50px;"><br>M3GAN
+2022 <br> ‧ Horror/Sci-fi ‧ 1h 42m
+</label></div>        </th>
+                <th>
+                    <div class="img__wrap"><img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQ5Kmw2OPRVGAeDrtul_Q4V_nz_9SDY2VQj8Ol41c_J-YZzMRtF" jsaction="VQAsE" class="r48jcc pT0Scc iPVvYb" style="max-width: 728px; height: 418px; margin: 1px 0px; width: 350px;margin-top: 150px;display: block;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;margin-top: 0px;margin-left: 40px;" alt="" jsname="kn3ccd">
+                        <p class="img__description"style="margin-left: 50px;">
+                            After the death of her mother and having no other known relatives, Evie takes a DNA test and discovers a long-lost cousin she never knew she had. Invited by her newfound family to a lavish wedding in the English countryside, Evie's at first seduced by the sexy aristocratic host. However, she's soon thrust into a nightmare of survival as she uncovers twisted secrets about her family history and the unsettling intentions behind their sinful generosity.
+                        </p>
+                    <label for=""style="margin-left: 50px;"><br>The Invitation
+2022 ‧ Horror/Mystery ‧ 1h 44m
+</label></div>
+                </th>
+                <th>
+                    <div class="img__wrap"><img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSPkv49y0UYywLik-CVtV5TnAl5KXKwf9W0nqOrw7HCl-pqow5k" jsaction="VQAsE" class="r48jcc pT0Scc iPVvYb" style="max-width: 728px; height: 418px; margin: 1px 0px; width: 350px;margin-top: 150px;display: block;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;margin-top: 0px;margin-left: 50px;" alt="" jsname="kn3ccd">
+                        <p class="img__description"style="margin-left: 50px;">
+                            After witnessing a bizarre, traumatic incident involving a patient, Dr. Rose Cotter starts experiencing frightening occurrences that she can't explain. As an overwhelming terror begins taking over her life, Rose must confront her troubling past in order to survive and escape her horrifying new reality.
+
+                        </p>
+                    <label for=""style="margin-left: 50px;"><br>Smile
+2022 ‧ Horror/Psychological horror ‧ 1h 55m
+</label></div>
+                </th>
+                </tr>
+                <tr>
+                    <th>
+                        <div class="img__wrap"><img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTVSUFs6UHUlC8qwcgmUPoRASxUYszCey3Cotl_NgCfrmjAY7oI" jsaction="VQAsE" class="r48jcc pT0Scc iPVvYb" style="max-width: 728px; height: 418px; margin: 1px 0px; width: 350px;margin-top: 150px;display: block;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;margin-top: 70px;margin-left: 10px;" alt="" jsname="kn3ccd">
+                            <p class="img__description"style="margin-left: 50px;">
+                                The son of a Hasidic funeral director returns home with his pregnant wife in hopes of reconciling with his father. Little do they know that an ancient evil lurking inside a mysterious corpse has sinister plans for their unborn child.
+                            </p>
+                        <label for=""style="margin-left: 50px;"><br>The Offering
+2022 ‧ Horror/Thriller ‧ 1h 33m
+</label></div>
+                    </th>
+                    <th>
+                        <div class="img__wrap"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHcRnMDodoMePa26qLLthhIPjGhF8jkN-D1VbwGxICe6t33Ly7" jsaction="VQAsE" class="r48jcc pT0Scc iPVvYb" style="max-width: 728px; height: 418px; margin: 1px 0px; width: 350px;margin-top: 150px;display: block;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;margin-top: 70px;margin-left: 30px;" alt="" jsname="kn3ccd">
+                            <p class="img__description"style="margin-left: 50px;">
+                                A young man agrees to fulfil the ritualistic duties of a shomer and sit in vigil over a dead body, but realises something is very wrong when he arrives at the dilapidated house.
+                            </p>
+                        <label for="" style="margin-left: 50px;"><br>The Vigil
+2019 ‧ Horror/Thriller ‧ 1h 28m
+</label></div>
+                    </th>
+                    <th><div class="img__wrap"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHcRnMDodoMePa26qLLthhIPjGhF8jkN-D1VbwGxICe6t33Ly7" jsaction="VQAsE" class="r48jcc pT0Scc iPVvYb" style="max-width: 728px; height: 418px; margin: 1px 0px; width: 350px;margin-top: 150px;display: block;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;margin-top: 70px;margin-left: 40px;" alt="" jsname="kn3ccd">
+                        <p class="img__description"style="margin-left: 50px;">
+                            As a serial killer stalks the city, a young actress who just moved to town with her boyfriend notices a mysterious stranger watching her from across the street.
+                        </p>
+                    <label for=""style="margin-left: 50px;"><br>Watcher
+2022 ‧ Thriller/Psychological thriller ‧ 1h 36m</label></div>
+                </th>
+                <th>
+                    <div class="img__wrap"> <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSBKXOJc6MtFdHwrCqwkNSzTllKjf1ukZRg7eh__pCotA1m1Eqq" jsaction="VQAsE" class="r48jcc pT0Scc iPVvYb" style="max-width: 728px; height: 418px; margin: 1px 0px; width: 350px;margin-top: 150px;display: block;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;margin-top: 70px;margin-left: 50px;" alt="" jsname="kn3ccd">
+                        <p class="img__description"style="margin-left: 50px;">
+                            After a troubled childhood, Ashley searches for a connection and unknowingly becomes connected to a demonic force.
+                        </p>
+                    <label for="" style="margin-left: 50px;"><br>Along Came the Devil
+2019 ‧ Horror/Thriller ‧ 1h 29m
+</label></div>
+                </th>
+                </tr>
+                
+            </tbody>
+        </table><br><br>
+        <table id="Thriller" style="height: 400px;">
+            <thead>
+                <p style="font-size:x-large;text-align: center;color: rgb(94, 31, 255);margin-top: 103px;text-shadow: 2px 2px black;">********THRILLER MOVIES ******</em> </strong> </p>
+            </thead>
+                <tr>
+                    <th>
+                        <div class="img__wrap"><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSmoZIoFgIkKCledRzZT3q3xy64ZwMfnVXSQUdfp7cSo1suHPye" jsaction="VQAsE" class="r48jcc pT0Scc iPVvYb" style="max-width: 1000px; height: 500px; margin: 0px; width: 334px;" alt="" jsname="kn3ccd">
+                        <p class="img__description">A Pakistani general hires a private terror outfit to conduct attacks in India while Pathaan, an Indian secret agent, is on a mission to form a special unit.</p>
+                    <label for="">Pathaan
+CBFC: U/A 2023 ‧ Action/Thriller ‧ 2h 26m
+<br></label></div>
+                    </th>
+                    <th>
+                        <div class="img__wrap"><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcR-GJWOluiuP4BTtHHg6Kk68cuueul3mwQOMwueqol3kBMrT8c7" jsaction="VQAsE" class="r48jcc pT0Scc iPVvYb" style="max-width: 638px; height: 503px; margin: 0px; width: 334px;" alt="" jsname="kn3ccd">
+                        <p class="img__description">
+                            Rocky successfully rises as the leader and saviour of the people of the Kolar Gold Fields. But, in his goal to fulfil his mother's wishes, Rocky must tackle Adheera, Inayat Khalil and Ramika Sen.
+                        </p>
+                        <label for="">K.G.F: Chapter 2
+CBFC: U/A 2022 ‧ Action/Drama ‧ 2h 48m
+<br></label></div>
+                    </th>
+                    <th>
+                        <div class="img__wrap"><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQkDfTz2QFNI8m4KXDCTNWQYDIdQGrOfXXEy84TiAtpMDVtREBx" jsaction="VQAsE" class="r48jcc pT0Scc iPVvYb" style="max-width: 960px; height: 501px; margin: 1px 0px; width: 334px;" alt="" jsname="kn3ccd">
+                        <p class="img__description">
+                            Amid the Indo-Pakistani War of 1971, a RAW agent enters Pakistan to prove the country's complicity in nuclear weapons. To succeed, he must alert his nation and avoid an attack on the wrong location.
+                        </p>
+                        <label for="">Mission Majnu
+CBFC: U/A 2023 ‧ Action/Thriller ‧ 2h 9m
+<br></label></div>
+                    </th>
+                    <th>
+                        <div class="img__wrap"><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcT-S81gaS-IAz0F-IlS_q0oPaVy_9NMFg4rLFQt_XjsAUWwWzEC" jsaction="VQAsE" class="r48jcc pT0Scc iPVvYb" style="max-width: 638px; height: 498px; margin: 0px; width: 331px;" alt="" jsname="kn3ccd">
+                        <p class="img__description">
+                            A tough police officer sets out on a mission to track down and eliminate a gangster with a reputation as legendary as his own.
+                        </p>
+                    <label for=""><br>Vikram Vedha <br>
+CBFC: U/A 2022 ‧ Action/Thriller ‧ 2h 40m
+</label></div>
+                    </th>
+                </tr>
+        </table>
+        <table style="height: 1400px;">
+            <thead>
+                <p style="font-size:x-large;text-align: center;color: rgb(31, 255, 221);margin-top: 200px;text-shadow: 2px 2px rgb(60, 0, 255);"><><><><><><><><><><>COMEDY MOVIES<><><><><><><><><><></em> </strong> </p>
+            </thead>
+            <tr>
+                <th>
+                    <div class="img__wrap"><img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRJImfOrXdQ1aWMWgoJdyxyU9EkvxP0luz5uF5agqKUKOZAhyh5" jsaction="VQAsE" class="r48jcc pT0Scc iPVvYb" style="max-width: 711px; height: 507px; margin: 0.5px 0px; width: 334px;" alt="" jsname="kn3ccd">
+                    <p class="img__description">
+                        Five orphan men return to the orphanage they grew up in to attend their mentor's funeral. However, they encounter the ghost of their childhood friend, Khushi, and help her attain salvation.
+                    </p>
+                    <label for=""><br>Golmaal Again <br>
+CBFC: U/A 2017 ‧ Comedy/Hindi cinema ‧ 2h 20m
+</label></div>
+                </th>
+                <th>
+                    <div class="img__wrap"><img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSRrC0_MEg1FK61aXhSGvugUWWfG_PyB8ZVhHLRt9teD6oBteYg" jsaction="VQAsE" class="r48jcc pT0Scc iPVvYb" style="max-width: 638px; height: 503px; margin: 0px; width: 334px;" alt="" jsname="kn3ccd">
+                    <p class="img__description">
+                        Venky and Varun, who plan on marrying rich wives, fall into the trap of their own making when they realise the brides they are wooing are not rich but greedy for money.
+                    </p>
+                    <label for=""><br>F3: Fun and Frustration <br>
+CBFC: U 2022 ‧ Comedy/Family film ‧ 2h 28m
+</label></div>
+                </th>
+                <th>
+                    <div class="img__wrap"><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTRwdILw-UcAN1DHNDZKMmaoiuA7O6LdqzP--Xq1QOiOXeLsiVs" jsaction="VQAsE" class="r48jcc pT0Scc iPVvYb" style="max-width: 638px; height: 503px; margin-bottom: 2px; width: 334px;" alt="" jsname="kn3ccd">
+                    <p class="img__description">
+                        Shardul, a gay guy, and Suman, a lesbian woman, enter into holy matrimony to appease their families. However, when Suman's girlfriend moves in with them, their lives become more complex.
+                    </p>
+                    <label for="">Badhaai Do <br>
+CBFC: U/A 2022 ‧ Drama ‧ 2h 27m</label></div>
+                </th>
+                <th>
+                    <div class="img__wrap"><img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRZ58Mpr8_-oOoClwMUy7I8xA2LjTNlqxw2DTV3apUBvG0JCugQ" jsaction="VQAsE" class="r48jcc pT0Scc iPVvYb" style="max-width: 638px; height: 503px; margin-bottom: 2px; width: 334px;" alt="" jsname="kn3ccd">
+                    <p class="img__description">
+                        Naai Sekar abducts dogs in order to extract huge ransom from their owners. However, chaos ensues when he kidnaps a dog that belongs to Dass, a notorious kidnapper.
+                    </p>
+                    <label for="">Naai Sekar Returns <br>
+CBFC: U 2022 ‧ 2h 24m
+</label></div>
+                </th>
+                
+            </tr>
+            <tr>
+                <th>
+                    <div class="img__wrap"><img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQqb3xrs7kD02LEwDP2MdazgXYLbe0tXDn5ZjXeSBCrL65jHllp" jsaction="VQAsE" class="r48jcc pT0Scc iPVvYb" style="max-width: 720px; height: 501px; margin: 1px 0px; width: 334px;" alt="" jsname="kn3ccd">
+                    <p class="img__description">
+                        A teacher of social science falls in love with a British woman who teaches English in the same school as him, but all hell breaks loose when they decide to marry.
+                    </p>
+                    <label for=""><br>Prince
+CBFC: U 2022 ‧ Romance/Comedy ‧ 2h 23m</label></div>
+                </th>
+                <th>
+                    <div class="img__wrap"><img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTc0NbA_oZlmCDG3MObs1DTp25HZ0YWNhexS2fRQA_1TzZNjK_x" jsaction="VQAsE" class="r48jcc pT0Scc iPVvYb" style="max-width: 638px; height: 503px; margin: 0px; width: 334px;" alt="" jsname="kn3ccd">
+                    <p class="img__description">
+                        An ambitious young man from a conservative Hindu Brahmin family falls for an orthodox Christian woman. However, the young couple's will to get married leads to a series of comic capers.
+                    </p>
+                    <label for=""><br>Ante Sundaraniki <br>
+CBFC: U 2022 ‧ Rom-com ‧ 2h 56m</label></div>
+                </th>
+                <th>
+                    <div class="img__wrap"><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQtGBzhe-CuaIhcBv4NEqi6ZUj9Iely5TqCJA_sgA6x0iDREYNT" jsaction="VQAsE" class="r48jcc pT0Scc iPVvYb" style="max-width: 638px; height: 503px; margin: 0px; width: 334px;" alt="" jsname="kn3ccd">
+                    <p class="img__description">
+                        Chaos reigns due to a case of mistaken identity when two sets of twins who were separated at birth coincidentally visit the same city.
+                    </p>
+                    <label for=""><br>Cirkus <br>
+CBFC: U/A 2022 ‧ Comedy/Drama ‧ 2h 19m
+</label></div>
+                </th>
+                <th>
+                    <div class="img__wrap"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHvfCzr4MOD0Im6EE6DwwNAkUuNhQ7mY94kgIaS1mmXhWtHkEN" jsaction="VQAsE" class="r48jcc pT0Scc iPVvYb" style="max-width: 638px; height: 503px; margin: 0px; width: 334px;" alt="" jsname="kn3ccd">
+                    <p class="img__description">
+                        The story of Sam Greenfield, the unluckiest person in the world. Suddenly finding herself in the never-before-seen Land of Luck, she must unite with the magical creatures there to turn her luck around.
+                    </p>
+                    <label for=""><br>Luck <br>
+CBFC: U 2022 ‧ Family/Comedy ‧ 1h 45m</label></div>
+                </th>
+            </tr>
+        </table>
+    </fieldset>
+    <fieldset>
+        <table id="Animation" style="height: 1800px;">
+            <thead>
+                <p style="font-size:x-large;text-align: center;color: rgb(31, 255, 165);margin-top: 100px;">********ANIMATION MOVIES ******</em> </strong> </p>
+            </thead>
+            <tr>
+                <th>
+                    <div class="img__wrap"><img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSMwbbJ132lV40V2Pto7bY08jytnXwFq-Mx-k0PtZcCH43k8ioV" jsaction="VQAsE" class="r48jcc pT0Scc iPVvYb" style="max-width: 960px; height: 501px; margin: 0.5px 0px; width: 334px;" alt="" jsname="kn3ccd">
+                    <p class="img__description">
+                        Legendary space ranger Buzz Lightyear embarks on an intergalactic adventure alongside ambitious recruits Izzy, Mo, Darby, and his robot companion, Sox. As this motley crew tackles their toughest mission yet, they must learn to work together as a team to escape the evil Zurg and his dutiful robot army that are never far behind.
+                    </p>
+                    <label for=""><br>Lightyear
+CBFC: U 2022 ‧ Family/Adventure ‧ 1h 45m</label></div>
+                </th>
+                <th>
+                    <div class="img__wrap"><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRUC5oNSCikec3GcxjXnpxCTRAo-ZoUVGiIVcbFLA8p6SN2lxVi" jsaction="VQAsE" class="r48jcc pT0Scc iPVvYb" style="max-width: 1175px; height: 501px; margin: 1px 0px; width: 334px;" alt="" jsname="kn3ccd">
+                    <p class="img__description">
+                        A thirteen-year-old girl is torn between staying her mother's dutiful daughter and the changes of adolescence. And as if the challenges were not enough, whenever she gets overly excited she transforms into a giant red panda.
+                    </p>
+                    <label for=""><br>Turning Red
+2022 ‧ Family/Fantasy ‧ 1h 40m
+</label></div>
+                </th>
+                <th>
+                    <div class="img__wrap"><img src="https://m.media-amazon.com/images/M/MV5BZDQyODUwM2MtNzA0YS00ZjdmLTgzMjItZWRjN2YyYWE5ZTNjXkEyXkFqcGdeQXVyMTI2MzY1MjM1._V1_.jpg" jsaction="VQAsE" class="r48jcc pT0Scc iPVvYb" style="max-width: 758px; height: 508px; margin: 0px; width: 321px;" alt="" jsname="kn3ccd">
+                    <p class="img__description">
+                        In the 1970s, young Gru tries to join a group of supervillains called the Vicious 6 after they oust their leader -- the legendary fighter Wild Knuckles. When the interview turns disastrous, Gru and his Minions go on the run with the Vicious 6 hot on their tails. Luckily, he finds an unlikely source for guidance -- Wild Knuckles himself -- and soon discovers that even bad guys need a little help from their friends.
+                    </p>
+                    <label for=""><br>Minions: The Rise of Gru
+CBFC: U 2022 ‧ Comedy/Adventure ‧ 1h 30m
+</label></div>
+                </th>
+                <th>
+                    <div class="img__wrap"><img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRdk6Lm0cFzpfOj9bCIsG3ag2GqakJGjc_Q_Qv33OosztDNv3kp" jsaction="VQAsE" class="r48jcc pT0Scc iPVvYb" style="max-width: 450px; height: 508px; margin: 0px; width: 334px;" alt="" jsname="kn3ccd">
+                    <p class="img__description">
+                        Terrifying creatures roam the seas and the monster hunters are heroes. None is more beloved than the great Jacob Holland. When young Maisie Brumble joins his ship, he finds an unexpected ally.
+                    </p>
+                    <label for=""><br>The Sea Beast
+2022 ‧ Adventure/Comedy ‧ 1h 55m
+</label></div>
+                </th>
+                
+            </tr>
+            <tr>
+                <th>
+                    <div class="img__wrap"><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRsC-1W36zGYJwhFvTh8wWaXxrtieYrY63FJ06mVeQ8C1P_2DvP" jsaction="VQAsE" class="r48jcc pT0Scc iPVvYb" style="max-width: 1175px; height: 501px; margin: 1px 0px; width: 334px;" alt="" jsname="kn3ccd">
+                    <p class="img__description">
+                        Nick Daley is following in his father's footsteps as the night watchman at the American Museum of Natural History, so he knows what happens when the sun goes down. But when Kahmunrah escapes, it is up to Nick to save the museum once and for all.
+                    </p>
+                    <label for=""><br>Night at the Museum: Kahmunrah Rises Again
+2022 ‧ 1h 17m</label></div>
+                </th>
+                <th>
+                    <div class="img__wrap"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3eElpVmCeMqplQbkQd0y1fftL04FkfbQZrjKbEuhg3D6rQuKf" jsaction="VQAsE" class="r48jcc pT0Scc iPVvYb" style="max-width: 1175px; height: 501px; margin: 1px 0px; width: 334px;" alt="" jsname="kn3ccd">
+                    <p class="img__description">Buck, Crash, and Eddy try to keep the Lost World from being overtaken by dinosaurs, as they set out to find a place of their own.</p>
+                    <label for=""><br>The Ice Age Adventures of Buck Wild
+CBFC: U 2022 ‧ Comedy/Adventure ‧ 1h 22m</label></div>
+                </th>
+                <th>
+                    <div class="img__wrap"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiJ1cTinlp2uJUJndh5vgazmQHf4oW_iq7Qox5fwMNhdnx-3eY" jsaction="VQAsE" class="r48jcc pT0Scc iPVvYb" style="max-width: 721px; height: 495px; margin: 0.5px 0px; width: 334px;" alt="" jsname="kn3ccd">
+                    <p class="img__description">Van Helsing's mysterious new invention transforms Drac and his pals into humans, and Johnny into a monster. With their new mismatched bodies, Drac and the pack must find a way to switch themselves back before their transformations become permanent.</p>
+                    <label for=""><br>Hotel Transylvania: Transformania
+CBFC: U 2022 ‧ Comedy/Adventure ‧ 1h 27m
+</label></div>
+                </th>
+                <th>
+                    <div class="img__wrap"><img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQKgwibWG405LUgKFm18cH8QGv6B_K7OlUlNraygouKg5pMPQe7" jsaction="VQAsE" class="r48jcc pT0Scc iPVvYb" style="max-width: 1175px; height: 501px; margin: 1px 0px; width: 334px;" alt="" jsname="kn3ccd">
+                    <p class="img__description">
+                        When Superman and the rest of the league get kidnapped by Lex Luthor, it is up to Superdog Krypto to rescue them. He finds a group of shelter pets with superpowers and convinces them to help him.
+                    </p>
+                <label for=""><br>DC League of Super-Pets
+CBFC: U 2022 ‧ Adventure/Action ‧ 1h 45m
+</label></div>
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <div class="img__wrap"><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQs-YEY_bMKNUfVAt2eN-BRnMYwSGSQvTvgJsId6AuNx7HxjoHU" jsaction="VQAsE" class="r48jcc pT0Scc iPVvYb" style="max-width: 1175px; height: 501px; margin: 1px 0px; width: 334px;" alt="" jsname="kn3ccd">
+                    <p class="img__description">
+                        In New York City in 1932, women are not allowed to be firefighters. When the city's firemen disappear in mysterious fires, Georgia Nolan sees a golden opportunity. She disguises herself as Joe and joins a team of improvised firemen.
+                    </p>
+                <label for=""><br>Fireheart
+2022 ‧ Comedy/Adventure ‧ 1h 32m
+</label></div>
+                </th>
+                <th>
+                    <div class="img__wrap"><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTXOD4ZTHsg1M8B4G2KbF6Bw2cUDalTmr0HGSvGeEYst0RA71B3" jsaction="VQAsE" class="r48jcc pT0Scc iPVvYb" style="max-width: 1175px; height: 501px; margin: 1px 0px; width: 334px;" alt="" jsname="kn3ccd">
+                    <p class="img__description">
+                        Tom and Jerry are in the Wild West where they help save a ranch from the hands of a greedy villain. The rivals team up to help a cowgirl and her brother save their homestead from a greedy land-grabber.
+                    </p>
+                    <label for=""><br>Tom and Jerry: Cowboy Up!
+CBFC: U 2022 ‧ 1h 15m
+</label></div>
+                </th>
+                <th>
+                    <div class="img__wrap"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTz4wXwSMJjKoeDDNlOL6OYtCQbh6Jq9Ib97gWyOyu8WYL9sq-s" jsaction="VQAsE" class="r48jcc pT0Scc iPVvYb" style="max-width: 1175px; height: 501px; margin: 1px 0px; width: 334px;" alt="" jsname="kn3ccd">
+                    <p class="img__description">
+                        Years after her happily ever after, Giselle, Robert and Morgan move to a new community and Andalasia and the real world are thrown off-balance.
+                    </p>
+                    <label for=""><br>Disenchanted
+2022 ‧ Musical/Adventure ‧ 1h 59m
+</label></div>
+                </th>
+                <th>
+                    <div class="img__wrap"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjkbBqL3POWZb7EJmte1wpdZRJkE5_pkV532SF_-zl8LH2mN3a" jsaction="VQAsE" class="r48jcc pT0Scc iPVvYb" style="max-width: 1175px; height: 501px; margin: 1px 0px; width: 334px;" alt="" jsname="kn3ccd">
+                    <p class="img__description">
+                        In an Italian village, the wooden puppet Pinocchio is brought to life by the Blue Fairy and seeks the life of adventure while striving to be a real boy. Pinocchio's life is turned upside down when he leaves his father to follow the circus.
+                    </p>
+                    <label for=""><br>Pinocchio
+CBFC: U 2022 ‧ Fantasy/Musical ‧ 1h 45m
+</label></div>
+                </th>
+            </tr>
+        </table>
+    </fieldset>
+    <script src="/bootstrap-3.4.1-dist/js/jquery.min.js"></script>
+    <script src="/bootstrap-3.4.1-dist/js/bootstrap.min.js"></script>
+</body>
+</html>
